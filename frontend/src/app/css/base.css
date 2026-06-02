@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #111827;
+    --card-bg: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --accent: #3b82f6;
+    --border: #334155;
+    --bg-main: var(--bg-primary);
+    --bg-elevated: var(--bg-secondary);
+    --bg-surface: #16243a;
+    --bg-surface-strong: var(--card-bg);
+    --border-soft: color-mix(in srgb, var(--border) 62%, transparent);
+    --text-muted: var(--text-secondary);
+    --accent-strong: #2563eb;
+    --success: #22c55e;
+    --success-strong: #16a34a;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --shadow-soft: 0 18px 40px rgba(2, 8, 23, 0.28);
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+[data-theme="light"] {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #e2e8f0;
+    --card-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent: #2563eb;
+    --border: #cbd5e1;
+    --bg-surface: #eef2f7;
+    --accent-strong: #1d4ed8;
+    --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-primary);
+    background: var(--bg-main);
+    line-height: 1.5;
+}
+
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--card-bg) 78%, transparent);
+    border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(16px);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.top-actions .theme-toggle,
+.nav-links .theme-toggle,
+.meeting-info .theme-toggle,
+.support-header-actions .theme-toggle,
+.auth-container .theme-toggle {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: color-mix(in srgb, var(--card-bg) 78%, transparent);
+    border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-soft);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.08);
+    filter: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font: inherit;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.03);
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.app-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.app-logo-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    box-shadow: 0 12px 24px color-mix(in srgb, var(--accent) 28%, transparent);
+    flex-shrink: 0;
+}
+
+.app-logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.hidden {
+    display: none;
+}

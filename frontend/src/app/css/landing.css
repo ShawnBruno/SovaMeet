@@ -1,0 +1,106 @@
+body.landing {
+    min-height: 100vh;
+    background:
+        linear-gradient(color-mix(in srgb, var(--bg-primary) 72%, transparent), color-mix(in srgb, var(--bg-primary) 90%, transparent)),
+        url("/images/bg.png") no-repeat center center/cover;
+}
+
+.navbar {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: color-mix(in srgb, var(--bg-secondary) 88%, transparent);
+    border-bottom: 1px solid var(--border-soft);
+    backdrop-filter: blur(14px);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.hero {
+    text-align: center;
+    margin-top: 150px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: 18px auto 0;
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.hero button {
+    padding: 14px 28px;
+    margin-top: 24px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    color: #ffffff;
+    border-radius: 999px;
+    box-shadow: 0 16px 30px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background: color-mix(in srgb, var(--bg-secondary) 88%, transparent);
+    border-top: 1px solid var(--border-soft);
+    color: var(--text-primary);
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+@media (max-width: 700px) {
+    .navbar,
+    .footer {
+        padding: 16px 18px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .hero {
+        margin-top: 100px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
